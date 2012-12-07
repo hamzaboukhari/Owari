@@ -56,7 +56,8 @@
         if (i >= 12) {
           int j = 12;
           if(board[i - j].getStones() == 1) {
-            players[playerTurn - 1].addToScore(board[i - j].takeAllStones() + 1);
+            players[playerTurn - 1].addToScore(board[i - j].takeAllStones() 
+            + 1);
           } else {
             board[i - j].depositStone();
           }
@@ -112,12 +113,5 @@
       System.out.println("");
        
     }
-
-
-
-
-
-
-
 
   }

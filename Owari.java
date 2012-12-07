@@ -14,7 +14,7 @@ public class Owari {
       int response = IOUtil.readInt();
       
       while(!game.isValidMove(response)) {
-        System.out.println("Invalid move, please try again.");
+        System.out.println("Invalid move, please choose another bowl.");
         response = IOUtil.readInt();
       }
         
@@ -29,17 +29,20 @@ public class Owari {
           System.out.println("You are drawing.");
           System.out.println("");
           } else {
-          System.out.println("Player " + game.getLeadingPlayer() + " is winning.");
+          System.out.println("Player " + game.getLeadingPlayer() + 
+                             " is winning.");
           System.out.println("");
           }
         
         game.swapPlayers();
         if(!game.canCurrentPlayerMove()) {
-          System.out.println("Player " + game.getCurrentPlayer() + " cannot move.");
+          System.out.println("Player " + game.getCurrentPlayer() + 
+                             " cannot move.");
         game.swapPlayers();
         }
         
     }
-    System.out.println("Game over, Player " + game.getLeadingPlayer() + " wins!");
+    System.out.println("Game over, Player " + game.getLeadingPlayer() + 
+                       " wins!");
   }
 }
